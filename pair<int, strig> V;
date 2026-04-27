@@ -1,0 +1,89 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+    // 🔹 1. Single Pair Input
+    pair<int, int> p;
+    cout << "Enter a single pair: ";
+    cin >> p.first >> p.second;
+
+    cout << "Single Pair: " << p.first << " " << p.second << endl;
+
+
+    // 🔹 2. Multiple Pair Variables
+    pair<int, int> p1, p2;
+    cout << "\nEnter two pairs: ";
+    cin >> p1.first >> p1.second;
+    cin >> p2.first >> p2.second;
+
+    cout << "Pair 1: " << p1.first << " " << p1.second << endl;
+    cout << "Pair 2: " << p2.first << " " << p2.second << endl;
+
+
+    // 🔹 3. Array of Pairs
+    int n;
+    cout << "\nEnter size of array: ";
+    cin >> n;
+
+    pair<int, int> arr[n];
+
+    cout << "Enter " << n << " pairs:\n";
+    for(int i = 0; i < n; i++) {
+        cin >> arr[i].first >> arr[i].second;
+    }
+
+    cout << "Array of pairs:\n";
+    for(int i = 0; i < n; i++) {
+        cout << arr[i].first << " " << arr[i].second << endl;
+    }
+
+
+    // 🔹 4. Vector of Pairs (push_back)
+    int m;
+    cout << "\nEnter number of pairs for vector (push_back): ";
+    cin >> m;
+
+    vector<pair<int, int>> v1;
+
+    cout << "Enter " << m << " pairs:\n";
+    for(int i = 0; i < m; i++) {
+        int a, b;
+        cin >> a >> b;
+        v1.push_back({a, b});
+    }
+
+    cout << "Vector (push_back):\n";
+    for(auto p : v1) {
+        cout << p.first << " " << p.second << endl;
+    }
+
+
+    // 🔹 5. Vector of Pairs (direct indexing)
+    int k;
+    cout << "\nEnter number of pairs for vector (direct): ";
+    cin >> k;
+
+    vector<pair<int, int>> v2(k);
+
+    cout << "Enter " << k << " pairs:\n";
+    for(int i = 0; i < k; i++) {
+        cin >> v2[i].first >> v2[i].second;
+    }
+
+    cout << "Vector (direct):\n";
+    for(auto p : v2) {
+        cout << p.first << " " << p.second << endl;
+    }
+
+
+    // 🔹 6. Sorting pairs
+    sort(v2.begin(), v2.end());
+
+    cout << "\nSorted Vector:\n";
+    for(auto p : v2) {
+        cout << p.first << " " << p.second << endl;
+    }
+
+    return 0;
+}
