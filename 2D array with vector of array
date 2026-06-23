@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+void print(vector<int> &v){
+    cout<<"Size = "<<v.size()<<endl;
+    for(int i=0; i<v.size(); i++){
+        cout<<v[i]<<" ";
+    }
+}
+int main(){
+    int p;
+    cout<<"Array number= ";
+    cin>>p;
+    cout<<endl;
+vector <int> v[p]; //v[0], v[4] each is a separete arrays. they have their own size.
+
+for(int i=0; i<p; i++){
+    int n;
+    cout<<"Enter V["<<i<<"] array elements number: ";
+    cin>>n;
+    cout<<endl;
+    cout<<"Enter elements: ";
+for(int j=0; j<n; j++){
+    int x;
+    cin>>x;
+    v[i].push_back(x);
+}
+cout<<endl;
+}
+for(int i=0; i<p; i++){
+    print(v[i]);
+    cout<<endl;
+}
+
+cout<<v[0][1]; //v[0] array er v[1] index print hobe. this is kind of working like 2D array
+    return 0;
+}

@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+void print(vector <int> v){
+for (int i=0; i<v.size(); i++ ){
+    cout<<v[i]<<" ";
+}
+cout<<endl;
+}
+int main(){
+vector <int> v(5, 3);//10 is the size. and 3 is the number entered previous
+cout<<"before entering extra value. the size= "<<v.size()<<endl;
+print(v);
+v.push_back(7);
+
+cout<<"After entering extra value. the size= "<<v.size()<<endl;
+print(v);
+return 0;
+}
+
+
+
+
+/*output:
+before entering extra value. the size= 5
+3 3 3 3 3
+After entering extra value. the size= 6
+3 3 3 3 3 7*/
